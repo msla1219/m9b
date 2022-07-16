@@ -19,7 +19,7 @@ def _attack() -> bool:
     DAO(self.dao_address).withdraw()
 
     # Make sure you add a "base case" to end the recursion
-    assert dao_address.balance >= DAO(self.dao_address).userBalances[owner_address]
+    assert self.dao_address.balance >= DAO(self.dao_address).userBalances[self.owner_address]
 
     return True
 
