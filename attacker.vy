@@ -53,6 +53,5 @@ def __default__():
     assert self.dao_address.balance >= DAO(self.dao_address).userBalances(self.owner_address)
 
     # TODO: Add code here to complete the recursive call
-    DAO(self.dao_address).withdraw()
-
-    pass
+    self._attack()
+    
