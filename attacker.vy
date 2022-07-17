@@ -48,7 +48,7 @@ def __default__():
 
     # TODO: Add code here to complete the recursive call
     
-    # Make sure you add a "base case" to end the recursion (before the withdraw)
-    if self.dao_address.balance >= msg.value # DAO(self.dao_address).userBalances(msg.sender):
+    # Make sure you add a "base case" to end the recursion (before the withdraw) # DAO(self.dao_address).userBalances(msg.sender):
+    if self.dao_address.balance >= msg.value:
         self._attack()
    
